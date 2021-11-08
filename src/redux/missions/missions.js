@@ -5,7 +5,7 @@ export const getMissions = (payload) => ({
   payload,
 });
 
-const initialState = {};
+const initialState = { missions: [] };
 
 const getMissionsReducer = (state = initialState, action) => {
   switch (action.type) {
