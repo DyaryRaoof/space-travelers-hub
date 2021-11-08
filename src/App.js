@@ -11,9 +11,9 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route exact path="/" component={Rockets} />
-        <Route path="/missions" component={Missions} />
-        <Route path="/missions" component={MyProfile} />
+        <Route exact path="/" element={<Rockets />} />
+        <Route path="/missions" element={<Missions />} />
+        <Route path="/profile" element={<MyProfile />} />
       </Routes>
     </Router>
   );

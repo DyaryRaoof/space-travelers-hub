@@ -1,5 +1,5 @@
 const Rockets = () => (
-  <div />
+  <div>Hello From Rockets</div>
 );
 
 export default Rockets;

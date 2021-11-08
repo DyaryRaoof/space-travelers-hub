@@ -1,5 +1,5 @@
 const Missions = () => (
-  <div />
+  <div>Hello From Missions</div>
 );
 
 export default Missions;
