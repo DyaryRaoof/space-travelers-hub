@@ -25,8 +25,8 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light panel-bg">
       <div className="d-flex container justify-content-between align-items-center">
         <div className="d-flex align-items-center">
-          <img src={planetLogo} alt="Logo" />
-          <span>Space Travelers' Hub</span>
+          <img className="planet-logo" src={planetLogo} alt="Logo" />
+          <span>Space Travelers&apos; Hub</span>
           <ul className="navbar-nav">
             {links.map((link) => (
               <li key={link.id} className="nav-item ps-3">
@@ -37,7 +37,6 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <img src={loginLogo} alt="Login" className="login-logo" />
       </div>
     </nav>
   );
