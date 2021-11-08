@@ -1,0 +1,23 @@
+.mission-description-cell {
+  width: 50%;
+}
+
+.mission-name-cell {
+  width: 10%;
+  font-weight: bold;
+}
+
+.mission-member-span {
+  text-align: center;
+  vertical-align: middle;
+  background-color: grey;
+  border-radius: 4px;
+  padding: 2px 4px;
+  color: white;
+}
+
+.mission-member-cell,
+.button-cell {
+  vertical-align: middle;
+  text-align: center;
+}
