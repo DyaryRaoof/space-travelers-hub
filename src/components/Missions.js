@@ -11,26 +11,29 @@ const Missions = () => {
   useEffect(() => dispatch(fetchMissions()), []);
 
   return (
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th>-</th>
-        </tr>
-      </thead>
-      <tbody>
-        {missions.map((mission) => (
-          <tr key={mission.mission_id}>
-            <td className="mission-name-cell">{mission.mission_name}</td>
-            <td className="mission-description-cell">{mission.description}</td>
-            <td className="mission-member-cell"><span className="mission-member-span">Not A Member</span></td>
-            <td className="button-cell"><Button variant="outline-secondary">Join Mission</Button></td>
+    <div className="missions-table">
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>-</th>
           </tr>
-        ))}
-      </tbody>
-    </Table>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <tr key={mission.mission_id}>
+              <td className="mission-name-cell">{mission.mission_name}</td>
+              <td className="mission-description-cell">{mission.description}</td>
+              <td className="mission-member-cell"><span className="mission-member-span">Not A Member</span></td>
+              <td className="button-cell"><Button variant="outline-secondary">Join Mission</Button></td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </div>
+
   );
 };
 
