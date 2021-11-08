@@ -1,11 +1,11 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getMissions } from '../redux/missions/missions';
+import fetchMissions from '../api';
 
 const Missions = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getMissions({ id: 1 }));
+    fetchMissions(dispatch);
   }, []);
   return (
     <div>Hello From Missions</div>
