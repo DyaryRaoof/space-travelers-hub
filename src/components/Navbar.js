@@ -23,21 +23,21 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light panel-bg">
+    <nav className="navbar navbar-expand-lg navbar-light panel-bg border-bottom">
       <div className="d-flex container justify-content-between align-items-center">
         <div className="d-flex align-items-center">
           <img className="planet-logo" src={planetLogo} alt="Logo" />
-          <span>Space Travelers&apos; Hub</span>
-          <ul className="navbar-nav">
-            {links.map((link) => (
-              <li key={link.id} className="nav-item ps-3">
-                <NavLink to={link.path} className="nav-link" exact="true">
-                  {link.text}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
+          <span className="header-title">Space Travelers&apos; Hub</span>
         </div>
+        <ul className="navbar-nav">
+          {links.map((link) => (
+            <li key={link.id} className="nav-item ps-3">
+              <NavLink to={link.path} className="nav-link" exact="true">
+                {link.text}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );
