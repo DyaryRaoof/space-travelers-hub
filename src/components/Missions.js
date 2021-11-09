@@ -9,7 +9,11 @@ const Missions = () => {
   const missions = useSelector((state) => state.missionsReducer.missions);
   const dispatch = useDispatch();
 
-  useEffect(() => dispatch(fetchMissions()), []);
+  useEffect(() => {
+    if (missions.length === 0) {
+      dispatch(fetchMissions());
+    }
+  }, []);
 
   return (
     <div className="missions-table">
