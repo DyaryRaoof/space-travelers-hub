@@ -1,5 +1,6 @@
 const FETCH_ROCKETS = 'space-travellers/rockets/FETCH_ROCKETS';
 const BOOK_ROCKET = 'space-travellers/rockets/BOOK_ROCKET';
+const CANCEL_ROCKET = 'space-travellers/rockets/CANCEL_ROCKET';
 
 const URL = 'https://api.spacexdata.com/v3/rockets';
 
@@ -21,6 +22,11 @@ export const bookRocket = (payload) => ({
   payload,
 });
 
+export const cancelRocket = (payload) => ({
+  type: CANCEL_ROCKET,
+  payload,
+});
+
 const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ROCKETS:
@@ -31,6 +37,16 @@ const rocketsReducer = (state = initialState, action) => {
         rockets: state.rockets.map((rocket) => {
           if (rocket.id === parseInt(action.payload, 10)) {
             return { ...rocket, reserved: true };
+          }
+          return rocket;
+        }),
+      };
+    case CANCEL_ROCKET:
+      return {
+        ...state,
+        rockets: state.rockets.map((rocket) => {
+          if (rocket.id === parseInt(action.payload, 10)) {
+            return { ...rocket, reserved: false };
           }
           return rocket;
         }),
