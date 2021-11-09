@@ -1,5 +1,6 @@
 const FETCH_MISSIONS = 'space-travellers/missions/FETCH_MISSIONS';
 const JOIN_MISSION = 'space-travellers/missions/JOIN_MISSION';
+const LEAVE_MISSION = 'space-travellers/missions/LEAVE_MISSION';
 
 export const getMissions = (payload) => ({
   type: FETCH_MISSIONS,
@@ -8,6 +9,11 @@ export const getMissions = (payload) => ({
 
 export const joinMission = (payload) => ({
   type: JOIN_MISSION,
+  payload,
+});
+
+export const leaveMission = (payload) => ({
+  type: LEAVE_MISSION,
   payload,
 });
 
@@ -23,6 +29,17 @@ const getMissionsReducer = (state = initialState, action) => {
         missions: state.missions.map((mission) => {
           if (mission.mission_id === action.payload) {
             return { ...mission, reserved: true };
+          }
+          return mission;
+        }),
+      };
+
+    case LEAVE_MISSION:
+      return {
+        ...state,
+        missions: state.missions.map((mission) => {
+          if (mission.mission_id === action.payload) {
+            return { ...mission, reserved: false };
           }
           return mission;
         }),
