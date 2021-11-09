@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import fetchMissions from '../api';
-import { joinMission } from '../redux/missions/missions';
+import { joinMission, leaveMission } from '../redux/missions/missions';
 import './Mission.css';
 
 const Missions = () => {
@@ -36,7 +36,11 @@ const Missions = () => {
               </td>
               <td className="button-cell">
                 <Button
-                  onClick={() => { dispatch(joinMission(mission.mission_id)); }}
+                  onClick={
+                    mission.reserved
+                      ? () => { dispatch(leaveMission(mission.mission_id)); }
+                      : () => { dispatch(joinMission(mission.mission_id)); }
+                    }
                   variant={mission.reserved ? 'outline-danger' : 'outline-secondary'}
                 >
                   {mission.reserved ? 'Leave Mission' : 'Join Mission'}
