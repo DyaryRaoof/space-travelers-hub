@@ -4,7 +4,9 @@
 
 In this website, we worked with the real live data from the SpaceX API. Our task was to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./screenshot1.png)
+
+![screenshot](./screenshot2.png)
 
 ## Built With
 
@@ -29,6 +31,12 @@ In this website, we worked with the real live data from the SpaceX API. Our task
 - GitHub: [@DyaryRaoof](https://github.com/DyaryRaoof)
 - Twitter: [@DyaryRaoof](https://twitter.com/DyaryRaoof)
 - LinkedIn: [@DyaryRaoof](https://linkedin.com/in/DyaryRaoof)
+
+👤 **Nacho Sala**
+
+- GitHub: [@nachosala89](https://github.com/nachosala89)
+- Twitter: [@nachosala89](https://twitter.com/nachosala89)
+- LinkedIn: [Juan Ignacio Sala](https://www.linkedin.com/in/nacho-sala)
 
 ## 🤝 Contributing
 

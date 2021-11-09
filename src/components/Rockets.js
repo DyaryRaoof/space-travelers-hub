@@ -22,7 +22,7 @@ const Rockets = () => {
   };
 
   return (
-    <ul className="container">
+    <ul className="container rockets-list">
       {(typeof rockets !== 'undefined')
         ? rockets.map((rocket) => (
           <li key={rocket.id} className="row mb-3">
