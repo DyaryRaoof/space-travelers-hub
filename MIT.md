@@ -1,4 +1,4 @@
-## Copyright 2021, [Dyary Roaof BayzAgha and Nacho Sala]
+## Copyright 2021, [Dyary Raoof BayzAgha and Nacho Sala]
 
 ###### Please delete this line and the next one
 ###### APP TYPE can be a webpage/website, a web app, a software and so on
