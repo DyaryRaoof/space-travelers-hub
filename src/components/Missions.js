@@ -27,8 +27,22 @@ const Missions = () => {
             <tr key={mission.mission_id}>
               <td className="mission-name-cell">{mission.mission_name}</td>
               <td className="mission-description-cell">{mission.description}</td>
-              <td className="mission-member-cell"><span className={mission.reserved ? 'mission-member-span-active' : 'mission-member-span'}>{mission.reserved ? 'Active Member' : 'Not A Member'}</span></td>
-              <td className="button-cell"><Button onClick={() => { dispatch(joinMission(mission.mission_id)); }} variant={mission.reserved ? 'outline-danger' : 'outline-secondary'}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</Button></td>
+              <td className="mission-member-cell">
+                <span
+                  className={mission.reserved ? 'mission-member-span-active' : 'mission-member-span'}
+                >
+                  {mission.reserved ? 'Active Member' : 'Not A Member'}
+                </span>
+              </td>
+              <td className="button-cell">
+                <Button
+                  onClick={() => { dispatch(joinMission(mission.mission_id)); }}
+                  variant={mission.reserved ? 'outline-danger' : 'outline-secondary'}
+                >
+                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+
+                </Button>
+              </td>
             </tr>
           ))}
         </tbody>
