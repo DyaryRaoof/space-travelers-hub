@@ -16,6 +16,15 @@
   color: white;
 }
 
+.mission-member-span-active {
+  text-align: center;
+  vertical-align: middle;
+  background-color: lightgreen;
+  border-radius: 4px;
+  padding: 2px 4px;
+  color: white;
+}
+
 .mission-member-cell,
 .button-cell {
   vertical-align: middle;
