@@ -9,8 +9,8 @@ export const fetchRocketsSuccess = (payload) => ({
   payload,
 });
 
-export const fetchRockets = () => (dispatch) => {
-  fetch(URL)
+export const fetchRockets = () => async (dispatch) => {
+  await fetch(URL)
     .then((response) => response.json())
     .then((rockets) => dispatch(fetchRocketsSuccess(rockets)));
 };
