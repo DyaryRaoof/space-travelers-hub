@@ -8,6 +8,9 @@ const MyProfile = () => {
   const reserverdMissions = useSelector((state) => state.missionsReducer
     .missions.filter((mission) => mission.reserved === true));
 
+  const reservedRockets = useSelector((state) => state.rocketsReducer
+    .rockets.filter((rocket) => rocket.reserved === true));
+
   return (
     <Container className="profile-container">
       <Row>
@@ -21,7 +24,16 @@ const MyProfile = () => {
             ))}
           </ListGroup>
         </Col>
-        <Col>2 of 2</Col>
+        <Col>
+          <h1>My Rockets</h1>
+          <ListGroup>
+            {reservedRockets.map((rocket) => (
+              <ListGroup.Item key={rocket.id}>
+                {rocket.rocket_name}
+              </ListGroup.Item>
+            ))}
+          </ListGroup>
+        </Col>
       </Row>
     </Container>
   );
