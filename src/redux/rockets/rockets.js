@@ -1,4 +1,5 @@
 const FETCH_ROCKETS = 'space-travellers/rockets/FETCH_ROCKETS';
+const BOOK_ROCKET = 'space-travellers/rockets/BOOK_ROCKET';
 
 const URL = 'https://api.spacexdata.com/v3/rockets';
 
@@ -15,10 +16,25 @@ export const fetchRockets = () => async (dispatch) => {
     .then((rockets) => dispatch(fetchRocketsSuccess(rockets)));
 };
 
+export const bookRocket = (payload) => ({
+  type: BOOK_ROCKET,
+  payload,
+});
+
 const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ROCKETS:
       return { ...state, rockets: action.payload };
+    case BOOK_ROCKET:
+      return {
+        ...state,
+        rockets: state.rockets.map((rocket) => {
+          if (rocket.id === parseInt(action.payload, 10)) {
+            return { ...rocket, reserved: true };
+          }
+          return rocket;
+        }),
+      };
     default:
       return state;
   }
