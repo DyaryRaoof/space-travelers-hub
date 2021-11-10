@@ -4,7 +4,7 @@ const CANCEL_ROCKET = 'space-travellers/rockets/CANCEL_ROCKET';
 
 const URL = 'https://api.spacexdata.com/v3/rockets';
 
-const initialState = {};
+const initialState = { rockets: [] };
 
 export const fetchRocketsSuccess = (payload) => ({
   type: FETCH_ROCKETS,
