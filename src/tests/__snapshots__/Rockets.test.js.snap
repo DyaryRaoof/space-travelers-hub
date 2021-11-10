@@ -3,9 +3,5 @@
 exports[`renders correctly 1`] = `
 <ul
   className="container rockets-list"
->
-  <li>
-    Loading...
-  </li>
-</ul>
+/>
 `;
