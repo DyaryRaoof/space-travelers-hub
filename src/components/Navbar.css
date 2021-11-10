@@ -1,0 +1,16 @@
+.header-title {
+  font-size: 30px;
+}
+
+.planet-logo {
+  height: 50px;
+  padding-right: 10px;
+}
+
+.nav-link {
+  color: #0679f9 !important;
+}
+
+.nav-link.active {
+  text-decoration: underline !important;
+}
