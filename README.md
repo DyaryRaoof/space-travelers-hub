@@ -17,6 +17,10 @@ In this website, we worked with the real live data from the SpaceX API. Our task
 - CSS
 - JSX
 
+## Live Demo
+[Live Demo](https://youthful-lichterman-4505b6.netlify.app/)
+
+
 ## Getting Started
 
 - Clone the repository with `git clone` https://github.com/DyaryRaoof/space-travelers-hub.git;
